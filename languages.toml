@@ -1,0 +1,14 @@
+[language-server.efm]
+command = "efm-langserver"
+
+[language-server.efm.config]
+documentFormatting = true
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = [
+  { name = "efm", only-features = ["format", "diagnostics"] },
+  { name = "typescript-language-server", except-features = ["format", "diagnostics"] },
+]
+
